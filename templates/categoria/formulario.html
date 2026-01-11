@@ -11,9 +11,11 @@
         {% csrf_token %}
         {{ form.as_p }} <!-- Renderiza cada campo do formulário com <p> tags -->
         <button class="btn btn-primary mt-4" type="submit">Enviar</button>
-        <button onclick="location='{% url "categoria" %}'" class="btn btn-secondary mt-4" type="submit">Voltar</button>
-        
-    </form>
+        <button onclick="location='{% url "categoria" %}'" class="btn btn-secondary mt-4"type="button">
+    Voltar
+</button>
+
+ </form>
    
       
 

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block titulo_conteudo %}
+Confirmar Exclusão de Categoria
+{% endblock %}
+
+{% block conteudo %}
+
+<div class="alert alert-danger">
+    <p>Tem certeza que deseja excluir a categoria abaixo?</p>
+    <strong>{{ categoria.nome }}</strong>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger mt-3" type="submit">Excluir</button>
+    <button onclick="location='{% url "categoria" %}'"
+            class="btn btn-secondary mt-3"
+            type="button">
+        Voltar
+    </button>
+</form>
+
+{% endblock %}
